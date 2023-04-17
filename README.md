@@ -1,3 +1,4 @@
+### ⚠️Atenção video com demostração no fim do tutorial!
 # App_flutter
 ### App de interface interativa com scrolls horizontal e vertical 
 #### 1.0  navegue ate o seguinte arquivo lib\main.dart copie todo o codigo!
