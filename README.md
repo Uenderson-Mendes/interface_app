@@ -1,16 +1,39 @@
-# front
+# App_flutter
+### App de interface interativa com scrolls horizontal e vertical 
+#### 1.0  navegue ate o seguinte arquivo lib\main.dart copie todo o codigo!
 
-A new Flutter project.
+#### 2.0  crie uma pasta "imagens" onde vc guardará suas imagens.
+#### 3.0 navegue ate o seguinte arquivo pubspec.yaml.
+##### onde estiver da seguinte forma:
+```bash
+flutter:
 
-## Getting Started
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+```
+##### Adicione o seguinte codigo:
+```bash
+flutter:
 
-This project is a starting point for a Flutter application.
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  assets:
+ 
+  - pasta_imagens/nome_imagem.jpg
+  - pasta_imagens/nome_imagem.jpg
+  - pasta_imagens/nome_imagem.jpg
+  ....
+```
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Assista ao video de demostração
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## [🎬Demontração](https://drive.google.com/file/d/1NvPnE-zDVOHoLTRGYwc0uZwMOP_rxwDL/view?usp=drivesdk)
+
+
+# congratulations 😎
+![exemplo](https://gifburg.com/images/gifs/congratulations/gifs/0006.gif)
