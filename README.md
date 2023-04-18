@@ -31,9 +31,7 @@ flutter:
 ```
 
 
-# Assista ao video de demostração
 
-## [🎬Demontração](https://drive.google.com/file/d/1NvPnE-zDVOHoLTRGYwc0uZwMOP_rxwDL/view?usp=drivesdk)
 
 
 # congratulations 😎
