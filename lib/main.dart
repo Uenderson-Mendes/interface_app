@@ -1,5 +1,5 @@
 
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'dart:math';
 
@@ -36,50 +36,100 @@ class _MyHomePageState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      backgroundColor: Color.fromARGB(248, 255, 117, 12),
       
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(248, 42, 41, 41),
-        titleTextStyle: const TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-        color: Color.fromARGB(255, 255, 255, 255),
-              ),
-       title: Row(
+      body:Column( children: [
+        const SizedBox(height: 50,), 
+       ListTile(
+ title: Row(
+  
   mainAxisAlignment: MainAxisAlignment.spaceBetween,
   children: [
-    const Text("Olá! Uenderson!"),
+    Text(
+  "Olá! Uenderson!",
+  style: TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: Color.fromARGB(255, 0, 0, 0),
+  ),
+),
   Flexible(
   child: ClipRRect(
     borderRadius: BorderRadius.circular(25),
-    child: Image.asset('imagens/download.jpg', width: 45, height: 45),
+    child: Image.asset('imagens/download.jpg', width: 55, height: 55),
   ),
 ),
 
   ],
 ),
-      ),
-      body:Column( children: [
-       ListTile(
-  title: Text(
-    'Escolha seu jogo!!!',
-    style: TextStyle(
-      color: Color.fromARGB(255, 4, 11, 63),
-    ),
+),
+ Row(
+  
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: [
+    
+    Text(
+      
+"     escolha seu game!",
+  style: TextStyle(
+    
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: Color.fromARGB(255, 0, 0, 0),
   ),
 ),
-        Container(
+ 
+
+  ],
+),
+     const SizedBox(height: 30,),   
+Container(
+  
+
+  margin: const EdgeInsets.only(top: 18.0),
+  padding: const EdgeInsets.only(top: 16.0),
+  height: 570.0,
+  decoration: BoxDecoration(
+    
+    color: Color.fromARGB(255, 255, 255, 255), // cor de fundo do container
+    borderRadius: BorderRadius.only(
+      topLeft: Radius.circular(30.0), // borda superior esquerda arredondada
+      topRight: Radius.circular(30.0), // borda superior direita arredondada
+    ),
+    boxShadow: [
+      BoxShadow(
+        color: Color.fromARGB(255, 0, 0, 0).withOpacity(0.5),
+        spreadRadius: 1,
+        blurRadius: 5,
+        offset: Offset(0, -3), // desloca a sombra para cima
+      ),
+    ],
+  ),
+          child: ListView(
+            // This next line does the trick.
+            
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+
+
+
+const SizedBox(height: 0,),
+Container(
           height: 70.0,
           
           child: ListView(
+            
             // This next line does the trick.
             scrollDirection: Axis.horizontal,
             children: <Widget>[
+              const SizedBox(height: 10,),
               
-  const SizedBox(width: 0,),
+  const SizedBox(width: 10,),
             Container(
   width: 70.0,
   decoration: BoxDecoration(
-    color: Color.fromARGB(255, 36, 36, 36),
+    color: Color.fromARGB(255, 243, 120, 20),
     borderRadius: BorderRadius.circular(50.0),
   ),
   child: TextButton(
@@ -90,12 +140,7 @@ class _MyHomePageState extends State {
       children: [
         Icon(Icons.gamepad, color: Colors.white, size: 20,),
         
-       Text(
-  'FPS',
-  style: TextStyle(
-    color: Colors.white,
-  ),
-),
+     
       ],
     ),
   ),
@@ -104,7 +149,7 @@ class _MyHomePageState extends State {
              Container(
   width: 70.0,
   decoration: BoxDecoration(
-    color: Color.fromARGB(255, 36, 36, 36),
+    color: Color.fromARGB(255, 243, 120, 20),
     borderRadius: BorderRadius.circular(50.0),
   ),
   child: TextButton(
@@ -115,12 +160,7 @@ class _MyHomePageState extends State {
       children: [
         Icon(Icons.gamepad, color: Colors.white, size: 20,),
         
-       Text(
-  'FPS',
-  style: TextStyle(
-    color: Colors.white,
-  ),
-),
+     
       ],
     ),
   ),
@@ -129,7 +169,7 @@ class _MyHomePageState extends State {
            Container(
   width: 70.0,
   decoration: BoxDecoration(
-    color: Color.fromARGB(255, 36, 36, 36),
+    color: Color.fromARGB(255, 243, 120, 20),
     borderRadius: BorderRadius.circular(50.0),
   ),
   child: TextButton(
@@ -140,12 +180,27 @@ class _MyHomePageState extends State {
       children: [
         Icon(Icons.gamepad, color: Colors.white, size: 20,),
         
-       Text(
-  'FPS',
-  style: TextStyle(
-    color: Colors.white,
+     
+      ],
+    ),
   ),
 ),
+              const SizedBox(width: 10,),
+          Container(
+  width: 70.0,
+  decoration: BoxDecoration(
+    color: Color.fromARGB(255, 243, 120, 20),
+    borderRadius: BorderRadius.circular(50.0),
+  ),
+  child: TextButton(
+    onPressed: () { },
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      
+      children: [
+        Icon(Icons.gamepad, color: Colors.white, size: 20,),
+        
+     
       ],
     ),
   ),
@@ -154,7 +209,7 @@ class _MyHomePageState extends State {
            Container(
   width: 70.0,
   decoration: BoxDecoration(
-    color: Color.fromARGB(255, 36, 36, 36),
+    color: Color.fromARGB(255, 243, 120, 20),
     borderRadius: BorderRadius.circular(50.0),
   ),
   child: TextButton(
@@ -165,21 +220,56 @@ class _MyHomePageState extends State {
       children: [
         Icon(Icons.gamepad, color: Colors.white, size: 20,),
         
-       Text(
-  'FPS',
-  style: TextStyle(
-    color: Colors.white,
-  ),
-),
+     
       ],
     ),
   ),
 ),
-              const SizedBox(width: 10,),
+    const SizedBox(width: 10,),
+        Container(
+  width: 70.0,
+  decoration: BoxDecoration(
+    color: Color.fromARGB(255, 243, 120, 20),
+    borderRadius: BorderRadius.circular(50.0),
+  ),
+  child: TextButton(
+    onPressed: () { },
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      
+      children: [
+        Icon(Icons.gamepad, color: Colors.white, size: 20,),
+        
+     
+      ],
+    ),
+  ),
+),
+   const SizedBox(width: 10,),
+           Container(
+  width: 70.0,
+  decoration: BoxDecoration(
+    color: Color.fromARGB(255, 243, 120, 20),
+    borderRadius: BorderRadius.circular(50.0),
+  ),
+  child: TextButton(
+    onPressed: () { },
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      
+      children: [
+        Icon(Icons.gamepad, color: Colors.white, size: 20,),
+        
+     
+      ],
+    ),
+  ),
+),
+   const SizedBox(width: 10,),
             Container(
   width: 70.0,
   decoration: BoxDecoration(
-    color: Color.fromARGB(255, 36, 36, 36),
+    color: Color.fromARGB(255, 243, 120, 20),
     borderRadius: BorderRadius.circular(50.0),
   ),
   child: TextButton(
@@ -190,115 +280,12 @@ class _MyHomePageState extends State {
       children: [
         Icon(Icons.gamepad, color: Colors.white, size: 20,),
         
-       Text(
-  'FPS',
-  style: TextStyle(
-    color: Colors.white,
-  ),
-),
-      ],
-    ),
-  ),
-),           const SizedBox(width: 10,),
-           Container(
-  width: 70.0,
-  decoration: BoxDecoration(
-    color: Color.fromARGB(255, 36, 36, 36),
-    borderRadius: BorderRadius.circular(50.0),
-  ),
-  child: TextButton(
-    onPressed: () { },
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      
-      children: [
-        Icon(Icons.gamepad, color: Colors.white, size: 20,),
-        
-       Text(
-  'FPS',
-  style: TextStyle(
-    color: Colors.white,
-  ),
-),
+     
       ],
     ),
   ),
 ),
-   const SizedBox(width: 10,),
-           Container(
-  width: 70.0,
-  decoration: BoxDecoration(
-    color: Color.fromARGB(255, 36, 36, 36),
-    borderRadius: BorderRadius.circular(50.0),
-  ),
-  child: TextButton(
-    onPressed: () { },
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      
-      children: [
-        Icon(Icons.gamepad, color: Colors.white, size: 20,),
-        
-       Text(
-  'FPS',
-  style: TextStyle(
-    color: Colors.white,
-  ),
-),
-      ],
-    ),
-  ),
-),
-   const SizedBox(width: 10,),
-           Container(
-  width: 70.0,
-  decoration: BoxDecoration(
-    color: Color.fromARGB(255, 36, 36, 36),
-    borderRadius: BorderRadius.circular(50.0),
-  ),
-  child: TextButton(
-    onPressed: () { },
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      
-      children: [
-        Icon(Icons.gamepad, color: Colors.white, size: 20,),
-        
-       Text(
-  'FPS',
-  style: TextStyle(
-    color: Colors.white,
-  ),
-),
-      ],
-    ),
-  ),
-),
-   const SizedBox(width: 10,),
-           Container(
-  width: 70.0,
-  decoration: BoxDecoration(
-    color: Color.fromARGB(255, 36, 36, 36),
-    borderRadius: BorderRadius.circular(50.0),
-  ),
-  child: TextButton(
-    onPressed: () { },
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      
-      children: [
-        Icon(Icons.gamepad, color: Colors.white, size: 20,),
-        
-       Text(
-  'FPS',
-  style: TextStyle(
-    color: Colors.white,
-  ),
-),
-      ],
-    ),
-  ),
-),
+SizedBox(height: 10,)
            ],
           ),
         ),
@@ -405,25 +392,9 @@ const SizedBox(width: 10,),
   ),
 ),
 
-        
-        Container(
-           margin: const EdgeInsets.only(top: 8.0),
-  padding: const EdgeInsets.only(top: 16.0),
-         
-          height: 414.0,
-          
-           decoration: BoxDecoration(
-            
-    color: Color.fromARGB(255, 55, 57, 57), // cor de fundo do container
-    borderRadius: BorderRadius.only(
-      topLeft: Radius.circular(30.0), // borda superior esquerda arredondada
-      topRight: Radius.circular(30.0), // borda superior direita arredondada
-    ),),
-          child: ListView(
-            // This next line does the trick.
-            
-            scrollDirection: Axis.vertical,
-            children: <Widget>[
+
+
+
 
           Container(
             
